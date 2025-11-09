@@ -1,7 +1,6 @@
 import Mathlib.Data.Real.Basic
 import Mathlib.Data.Real.Irrational
 import Mathlib.Data.Rat.Defs
-import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Ring
 
 
@@ -50,6 +49,7 @@ example (a : ℝ) : a ^ 2 ≥ 7 * a → a ≤ 0 ∨ a ≥ 7 := by
   push_neg at hcon
   -- now we can simply use this one tactic and we're done:
   -- nlinarith
+  -- (this needs import Mathlib.Tactic.Nlinarith)
   -- OR step-by-step (a bit tedious)
   obtain ⟨ha, hb⟩ := hcon
   -- rewrite square as multiplication

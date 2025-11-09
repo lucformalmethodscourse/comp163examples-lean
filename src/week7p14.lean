@@ -1,5 +1,4 @@
 import Mathlib.Tactic.Ring
-import Mathlib.Tactic.Linarith
 
 
 -- TaiNing's slides week 7 page 14
