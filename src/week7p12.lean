@@ -1,21 +1,24 @@
 import Mathlib.Data.Real.Basic
+import Mathlib.Data.Real.Irrational
+import Mathlib.Data.Rat.Defs
 import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Ring
 
 
 -- TaiNing's slides week 7 page 12
 -- Proofs by contradiction
 
 example (x : ℕ) : Even (x ^ 2) → Even x := by
-  -- assume antecedent
+  -- assume hypothesis
   intro hsq
-  -- assume opposite of consequent to derive a contradiction
+  -- assume opposite of goal to derive a contradiction
   by_contra hx
   -- remove negation
   rw [Nat.not_even_iff_odd] at hx
   -- unpack oddness
-  rcases hx with ⟨j, hj⟩
+  obtain ⟨j, hj⟩ := hx
   -- unpack evenness
-  rcases hsq with ⟨k, hk⟩
+  obtain ⟨k, hk⟩ := hsq
   -- substitute
   rw [hj] at hk
   -- show that rhs is even (k + k form)
@@ -35,16 +38,16 @@ example (x : ℕ) : Even (x ^ 2) → Even x := by
 -- YHOO second example
 
 example (a : ℝ) : a ^ 2 ≥ 7 * a → a ≤ 0 ∨ a ≥ 7 := by
-  -- assume antecedent
+  -- assume hypothesis
   intro h
-  -- assume opposite of consequent to derive a contradiction
+  -- assume opposite of goal to derive a contradiction
   by_contra hcon
   -- push negation inside
   push_neg at hcon
   -- now we can simply use this one tactic and we're done:
   -- nlinarith
   -- OR step-by-step (a bit tedious)
-  rcases hcon with ⟨ha, hb⟩
+  obtain ⟨ha, hb⟩ := hcon
   -- rewrite square as multiplication
   rw [sq] at h
   -- cancel right multiplication by a
@@ -57,3 +60,18 @@ example (a : ℝ) : a ^ 2 ≥ 7 * a → a ≤ 0 ∨ a ≥ 7 := by
 
 
 -- TODO third example
+
+example (x : ℝ) : Irrational x ∧ x ≥ 0 → Irrational (√x) := by
+  -- assume hypothesis
+  intro h
+  -- apply definition of irrationality
+  unfold Irrational
+  -- assume opposite of goal to derive a contradiction
+  by_contra hsq
+  -- unpack rationality of √x
+  obtain ⟨p, q⟩ := hsq
+  -- construct rational representation of x
+  -- use (p * p) / (q * q)
+  -- break up conjunction in hypothesis
+  obtain ⟨hirr, hpos⟩ := h
+  sorry

@@ -19,8 +19,8 @@ example (n a b : ℕ) : ¬ n ∣ a * b → ¬ n ∣ a ∨ ¬ n ∣ b := by
   -- assume both divisibilities
   intro ⟨ha, hb⟩
   -- unpack both divisibilities
-  rcases ha with ⟨ka, hka⟩
-  rcases hb with ⟨kb, hkb⟩
+  obtain ⟨ka, hka⟩ := ha
+  obtain ⟨kb, hkb⟩ := hb
   -- construct witness for divisibility of product
   use n * ka * kb
   -- rewrite product using hk's

@@ -30,7 +30,7 @@ example (m n : ℕ) : Even n → Even (m * n) := by
   -- assume hypothesis
   intro hn
   -- unpack evenness of n by obtaining witness k
-  rcases hn with ⟨k, hk⟩
+  obtain ⟨k, hk⟩ := hn
   -- unpack evenness in goal by providing witness
   use m * k
   -- use hk to eliminate n in goal
