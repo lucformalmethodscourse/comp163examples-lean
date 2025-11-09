@@ -59,7 +59,7 @@ example (a : ℝ) : a ^ 2 ≥ 7 * a → a ≤ 0 ∨ a ≥ 7 := by
   contradiction
 
 
--- TODO third example
+-- TODO third example: tricky because of irrationality stuff
 
 example (x : ℝ) : Irrational x ∧ x ≥ 0 → Irrational (√x) := by
   -- assume hypothesis
