@@ -23,10 +23,8 @@ example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅:= by
 example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅:= by
   -- assume hypothesis
   intro h
-  -- rewrite inequality as predicate in hypothesis
-  rw [← Set.nonempty_iff_ne_empty] at h
-  -- rewrite inequality as predicate in goal
-  rw [← Set.nonempty_iff_ne_empty]
+  -- rewrite inequality as predicate in hypothesis and goal
+  rw [← Set.nonempty_iff_ne_empty] at *
   -- obtain a witness x from nonempty intersection
   obtain ⟨x, hx⟩ := h
   -- x is in the intersection, so x is in a (and in b)
@@ -45,8 +43,8 @@ example (a b : Set α) : a \ b ≠ ∅ → ¬(a ⊆ b) := by
   intro hab
   -- rewrite h as negation
   simp at h
-  -- rewrite h based on empty difference between set and superset
-  rw [Set.diff_eq_empty.mpr hab] at h -- FIXME eliminate mpr
+  -- rewrite h based on empty difference between subset and superset
+  rw [← Set.diff_eq_empty] at hab
   -- contradiction from ∅ ≠ ∅
   contradiction
 
