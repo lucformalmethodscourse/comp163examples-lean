@@ -5,7 +5,9 @@ import Mathlib.Tactic.Linarith
 -- TaiNing's slides week 7 page 14
 -- Proofs by contrapositive
 
+
 -- TODO first example: if x ^ 2 is irrational, then x is irrational
+-- deferred because of irrationality stuff
 
 
 -- YHOO second example: if x ^ 2 - 4 * x + 3 is even, then x is odd
@@ -29,6 +31,7 @@ example (x : ℕ) : Even (x ^ 2 - 4 * x + 3) → Odd x := by
   ring_nf
   -- deal with remaining arithmetic
   omega
+
 
 -- YHOO third example: same as p10 first example
 

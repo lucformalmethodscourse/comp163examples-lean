@@ -8,6 +8,9 @@ import Mathlib.Tactic.Ring
 -- TaiNing's slides week 7 page 12
 -- Proofs by contradiction
 
+
+-- first example
+
 example (x : ℕ) : Even (x ^ 2) → Even x := by
   -- assume hypothesis
   intro hsq
@@ -35,6 +38,7 @@ example (x : ℕ) : Even (x ^ 2) → Even x := by
   -- done
   contradiction
 
+
 -- YHOO second example
 
 example (a : ℝ) : a ^ 2 ≥ 7 * a → a ≤ 0 ∨ a ≥ 7 := by
@@ -59,7 +63,7 @@ example (a : ℝ) : a ^ 2 ≥ 7 * a → a ≤ 0 ∨ a ≥ 7 := by
   contradiction
 
 
--- TODO third example: tricky because of irrationality stuff
+-- TODO third example: defer - tricky because of irrationality stuff
 
 example (x : ℝ) : Irrational x ∧ x ≥ 0 → Irrational (√x) := by
   -- assume hypothesis

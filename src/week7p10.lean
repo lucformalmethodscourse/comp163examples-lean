@@ -3,6 +3,7 @@ import Mathlib.Data.Set.Basic
 -- TaiNing's slides week 7 page 10
 -- Direct set-theoretic proofs
 
+-- first example
 
 -- by contradiction because KL didn't know any better
 
@@ -34,6 +35,8 @@ example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅:= by
   exact ⟨x, hxa⟩
 
 
+-- second example
+
 -- by contradiction because KL didn't know any better
 
 example (a b : Set α) : a \ b ≠ ∅ → ¬(a ⊆ b) := by
@@ -64,6 +67,8 @@ example (a b : Set α) : a \ b ≠ ∅ → ¬(a ⊆ b) := by
   -- provide x as that counterexample (witness)
   exact ⟨x, hxa, hxb⟩
 
+
+-- third example
 
 example (x y z : Set α) : x ⊆ y → x ∪ z ⊆ y ∪ z := by
   -- assume hypothesis
