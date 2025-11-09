@@ -1,4 +1,5 @@
 import Mathlib.Tactic.Ring
+import Mathlib.Tactic.Linarith
 
 
 -- TaiNing's slides week 7 page 14
@@ -7,7 +8,7 @@ import Mathlib.Tactic.Ring
 -- TODO first example: if x ^ 2 is irrational, then x is irrational
 
 
--- TODO second example: if x ^ 2 - 4 * x + 3 is even, then x is odd
+-- YHOO second example: if x ^ 2 - 4 * x + 3 is even, then x is odd
 
 example (x : ℕ) : Even (x ^ 2 - 4 * x + 3) → Odd x := by
   -- prove by contrapositive (negation of implication)
@@ -22,13 +23,12 @@ example (x : ℕ) : Even (x ^ 2 - 4 * x + 3) → Odd x := by
   rw [Nat.not_even_iff_odd]
   -- rewrite x in terms of k
   rw [hk]
-  repeat ring_nf!
   -- construct witness for oddness of goal
-  -- 4 * k ^ 2 - 8 * k + 3 = 2 * (2 * k ^ 2 - 4 * k + 1) + 1
   use 2 * k ^ 2 - 4 * k + 1
-  repeat ring_nf!
-  sorry
-
+  -- simplify using ring laws
+  ring_nf
+  -- deal with remaining arithmetic
+  omega
 
 -- YHOO third example: same as p10 first example
 
