@@ -1,4 +1,4 @@
--- Try this example in [Lean 4 Web](https://live.lean-lang.org/#url=https://raw.githubusercontent.com/lucformalmethodscourse/comp163examples-lean/refs/heads/main/src/basic/basic1.lean)
+-- Try this example in Lean 4 Web: https://live.lean-lang.org/#url=https://raw.githubusercontent.com/lucformalmethodscourse/comp163examples-lean/refs/heads/main/src/basic/basic1.lean
 
 import Mathlib.Tactic.Ring
 
