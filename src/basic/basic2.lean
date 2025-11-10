@@ -1,5 +1,3 @@
--- Try this example in [Lean 4 Web](https://live.lean-lang.org/#url=https://raw.githubusercontent.com/lucformalmethodscourse/comp163examples-lean/refs/heads/main/src/basic/basic2.lean)
-
 import Mathlib.Data.Real.Basic
 
 -- a couple of very simple examples

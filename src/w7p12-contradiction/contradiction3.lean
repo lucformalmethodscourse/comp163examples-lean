@@ -1,5 +1,3 @@
--- Try this example in [Lean 4 Web](https://live.lean-lang.org/#url=https://raw.githubusercontent.com/lucformalmethodscourse/comp163examples-lean/refs/heads/main/src/w7p12-contradiction/contradiction3.lean)
-
 import Mathlib.Data.Real.Basic
 import Mathlib.Data.Real.Irrational
 import Mathlib.Data.Rat.Defs

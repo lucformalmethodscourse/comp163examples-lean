@@ -1,5 +1,3 @@
--- Try this example in [Lean 4 Web](https://live.lean-lang.org/#url=https://raw.githubusercontent.com/lucformalmethodscourse/comp163examples-lean/refs/heads/main/src/w7p14-contrapositive/contrapositive2.lean)
-
 import Mathlib.Tactic.Ring
 
 -- Week 7 p14 second example: if x ^ 2 - 4 * x + 3 is even, then x is odd

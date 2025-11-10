@@ -1,5 +1,3 @@
--- Try this example in [Lean 4 Web](https://live.lean-lang.org/#url=https://raw.githubusercontent.com/lucformalmethodscourse/comp163examples-lean/refs/heads/main/src/w7p10-sets/sets3.lean)
-
 import Mathlib.Data.Set.Basic
 
 -- Week 7 p 10 third example
