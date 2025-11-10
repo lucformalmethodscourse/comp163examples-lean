@@ -1,4 +1,3 @@
-import Mathlib.Tactic.Ring
 import Mathlib.Data.Real.Irrational
 
 -- Week 7 p14 first example: if x ^ 2 is irrational, then x is irrational

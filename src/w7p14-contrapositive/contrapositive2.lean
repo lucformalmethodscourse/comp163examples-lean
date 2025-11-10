@@ -1,4 +1,4 @@
-import Mathlib.Tactic.Ring
+import Mathlib.Tactic
 
 -- Week 7 p14 second example: if x ^ 2 - 4 * x + 3 is even, then x is odd
 

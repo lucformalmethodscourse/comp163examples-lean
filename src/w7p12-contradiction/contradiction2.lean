@@ -1,5 +1,4 @@
 import Mathlib.Data.Real.Basic
-import Mathlib.Tactic.Ring
 
 -- Week 7 p12 second example
 

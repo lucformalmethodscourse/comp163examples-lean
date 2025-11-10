@@ -1,4 +1,4 @@
-import Mathlib.Tactic.Ring
+import Mathlib.Tactic
 
 -- basic sanity check
 

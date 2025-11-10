@@ -1,4 +1,4 @@
-import Mathlib.Tactic.Ring
+import Mathlib.Tactic
 
 -- Week 7 p14 fourth example
 
