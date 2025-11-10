@@ -9,7 +9,7 @@ Open the `.lean` files in your preferred editor with Lean support (VS Code recom
 Alternatively, use the Lean 4 Web links in the index below to try them in the Lean 4 Web playground.
 This option doesn't require any installation.
 
-## Example Index
+## Examples
 
 | Example | Source | Try in Lean 4 Web |
 |---------|--------|-------------------|
