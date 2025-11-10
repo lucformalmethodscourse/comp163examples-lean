@@ -3,9 +3,9 @@ import Mathlib.Data.Set.Basic
 -- Week 7 p10 second example - by contradiction
 
 example (a b : Set α) : a \ b ≠ ∅ → ¬(a ⊆ b) := by
-  -- assume hypothesis
+  -- assume premise
   intro h
-  -- assume opposite of goal to derive a contradiction
+  -- assume opposite of conclusion to derive a contradiction
   intro hab
   -- rewrite h as negation
   simp at h

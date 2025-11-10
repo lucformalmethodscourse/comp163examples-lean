@@ -3,9 +3,9 @@ import Mathlib.Tactic
 -- Week 7 p12 first example
 
 example (x : ℕ) : Even (x ^ 2) → Even x := by
-  -- assume hypothesis
+  -- assume premise
   intro hsq
-  -- assume opposite of goal to derive a contradiction
+  -- assume opposite of conclusion to derive a contradiction
   by_contra hx
   -- remove negation
   rw [Nat.not_even_iff_odd] at hx

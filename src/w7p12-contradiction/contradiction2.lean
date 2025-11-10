@@ -3,9 +3,9 @@ import Mathlib.Data.Real.Basic
 -- Week 7 p12 second example
 
 example (a : ℝ) : a ^ 2 ≥ 7 * a → a ≤ 0 ∨ a ≥ 7 := by
-  -- assume hypothesis
+  -- assume premise
   intro h
-  -- assume opposite of goal to derive a contradiction
+  -- assume opposite of conclusion to derive a contradiction
   by_contra hcon
   -- push negation inside
   push_neg at hcon
