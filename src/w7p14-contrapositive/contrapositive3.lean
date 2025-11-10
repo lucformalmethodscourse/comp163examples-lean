@@ -2,7 +2,7 @@ import Mathlib.Tactic
 
 -- Week 7 p14 third example: same as p10 first example
 
-example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅:= by
+example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅ := by
   -- prove by contrapositive (negation of implication)
   contrapose
   -- get rid of negations where possible

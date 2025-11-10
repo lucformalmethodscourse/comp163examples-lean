@@ -2,7 +2,7 @@ import Mathlib.Data.Set.Basic
 
 -- Week 7 p 10 first example - direct proof
 
-example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅:= by
+example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅ := by
   -- assume premise
   intro h
   -- rewrite inequality as predicate in premise and conclusion

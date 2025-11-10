@@ -2,7 +2,7 @@ import Mathlib.Data.Set.Basic
 
 -- Week 7 p10 first example - by contradiction
 
-example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅:= by
+example (a b : Set α) : a ∩ b ≠ ∅ → a ≠ ∅ := by
   -- assume premise
   intro h
   -- assume opposite of conclusion to derive a contradiction
