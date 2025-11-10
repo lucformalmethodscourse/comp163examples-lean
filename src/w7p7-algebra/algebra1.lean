@@ -7,7 +7,7 @@ example (m n : ℤ) : Even m ∧ Even n → Even (m * n) := by
   -- assume premise
   intro h
   -- unpack conjunction
-  obtain ⟨hm, _⟩ := h -- we only need the left part
+  obtain ⟨hm, _⟩ := h -- we only need one side of the conjunction
   -- unpack evenness of m by obtaining witness l
   obtain ⟨l, hl⟩ := hm
   -- unpack evenness in conclusion by providing witness
