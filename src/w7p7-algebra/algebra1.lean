@@ -1,0 +1,18 @@
+import Mathlib.Tactic
+
+-- Week 7 p7 first example: product of even integers is even
+-- Claude did part of it
+
+example (m n : ℤ) : Even m ∧ Even n → Even (m * n) := by
+  -- assume hypothesis
+  intro h
+  -- unpack conjunction
+  obtain ⟨hm, _⟩ := h -- we only need the left part
+  -- unpack evenness of m by obtaining witness l
+  obtain ⟨l, hl⟩ := hm
+  -- unpack evenness in goal by providing witness
+  use l * n
+  -- use hl to eliminate m in goal
+  rw [hl]
+  -- prove equality in goal using ring laws
+  ring
