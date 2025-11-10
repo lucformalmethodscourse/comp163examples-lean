@@ -1,3 +1,5 @@
+-- Try this example in [Lean 4 Web](https://live.lean-lang.org/#url=https://raw.githubusercontent.com/lucformalmethodscourse/comp163examples-lean/refs/heads/main/src/w7p12-contradiction/contradiction2.lean)
+
 import Mathlib.Data.Real.Basic
 import Mathlib.Tactic.Ring
 
